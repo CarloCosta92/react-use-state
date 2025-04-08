@@ -8,7 +8,7 @@ import { useState } from "react";
 // },
 
 
-export default function Language() {
+export default function Language(props) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -17,11 +17,11 @@ export default function Language() {
     return (
         <>
             <div >
-                <button onClick={() => setIsOpen((element) => !element)}>bottone</button>
+                <button onClick={() => setIsOpen((element) => !element)}>{props.title}</button>
 
                 <div>
-                    <h2>nome linguiaggio</h2>
-                    <p>descrizione linguaggio</p>
+                    <h2>{props.title}</h2>
+                    <p>{props.description}</p>
                 </div>
             </div>
         </>

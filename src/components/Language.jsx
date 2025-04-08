@@ -8,7 +8,7 @@
 
 export default function Language({ title, onClick }) {
     return (
-        <button onClick={onClick}>
+        <button className="button" onClick={onClick}>
             {title}
         </button>
     );

@@ -12,7 +12,7 @@ export default function LanguagesList() {
     const selectedLanguage = languages.find(element => element.id === languageId);
 
     return (
-        <div>
+        <div className="main-container">
             <div>
                 {languages.map((language) => (
                     <Language
@@ -23,7 +23,7 @@ export default function LanguagesList() {
                 ))}
             </div>
             {selectedLanguage && (
-                <div>
+                <div className="card">
                     <h2>{selectedLanguage.title}</h2>
                     <p>{selectedLanguage.description}</p>
                 </div>

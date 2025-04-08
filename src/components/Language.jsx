@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 
 // {
 //     id: 1,
@@ -8,25 +6,16 @@ import { useState } from "react";
 // },
 
 
-export default function Language(props) {
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    console.log(isOpen)
-
+const Language = ({ title, description, isOpen, onClick }) => {
     return (
-        <>
-            <div >
-                <button onClick={() => setIsOpen((display) => !display)}>{props.title}</button>
-
-                <div>
-                    <h2>{isOpen && props.title}</h2>
-                    <p>{isOpen && props.description}</p>
-                </div>
+        <div>
+            <button onClick={onClick}>{title}</button>
+            <div>
+                <h2>{isOpen && title}</h2>
+                <p>{isOpen && description}</p>
             </div>
-        </>
+        </div>
+    );
+};
 
-    )
-
-}
-
+export default Language;

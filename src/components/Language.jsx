@@ -17,11 +17,11 @@ export default function Language(props) {
     return (
         <>
             <div >
-                <button onClick={() => setIsOpen((element) => !element)}>{props.title}</button>
+                <button onClick={() => setIsOpen((display) => !display)}>{props.title}</button>
 
                 <div>
-                    <h2>{props.title}</h2>
-                    <p>{props.description}</p>
+                    <h2>{isOpen && props.title}</h2>
+                    <p>{isOpen && props.description}</p>
                 </div>
             </div>
         </>

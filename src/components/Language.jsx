@@ -6,16 +6,13 @@
 // },
 
 
-const Language = ({ title, description, isOpen, onClick }) => {
+export default function Language({ title, onClick }) {
     return (
-        <div>
-            <button onClick={onClick}>{title}</button>
-            <div>
-                <h2>{isOpen && title}</h2>
-                <p>{isOpen && description}</p>
-            </div>
-        </div>
+        <button onClick={onClick}>
+            {title}
+        </button>
     );
-};
+}
 
-export default Language;
+
+

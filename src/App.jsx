@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import './index.css'
 import Header from './components/header'
-import Language from './components/Language'
 import LanguagesList from './components/LanguageList'
 
 function App() {
@@ -10,7 +8,6 @@ function App() {
     <>
       <Header />
       <LanguagesList />
-
     </>
   )
 }

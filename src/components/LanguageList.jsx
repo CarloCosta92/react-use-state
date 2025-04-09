@@ -11,6 +11,7 @@ export default function LanguagesList() {
 
     const selectedLanguage = languages.find(element => element.id === languageId);
 
+
     return (
         <div className="main-container">
             <div>
@@ -21,13 +22,21 @@ export default function LanguagesList() {
                         onClick={() => languageClick(language.id)}
                     />
                 ))}
+
             </div>
-            {selectedLanguage && (
+
+            {selectedLanguage ? (
                 <div className="card">
                     <h2>{selectedLanguage.title}</h2>
                     <p>{selectedLanguage.description}</p>
                 </div>
-            )}
+
+            ) : (
+                <div className="card">
+                    <p>Nessun linguaggio selezionato</p>
+                </div>
+            )
+            }
         </div>
     );
 }

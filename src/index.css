@@ -5,6 +5,7 @@
 }
 
 header {
+    font-size: 30px;
     margin-bottom: 50px;
 }
 
@@ -13,11 +14,16 @@ h1 {
     background-color: darkgrey;
 }
 
+main {
+    font-size: 20px;
+}
+
 .main-container {
     padding: 0 25%;
 }
 
 .button {
+    font-size: 20px;
     background-color: #0b6efd;
     padding: 20px;
     border: 0px;
